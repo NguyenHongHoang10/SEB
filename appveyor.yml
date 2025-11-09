@@ -1,11 +1,11 @@
 version: 1.0.{build}
 image: Visual Studio 2022
 configuration: Release
-platform: Any CPU
+platform: x64
 
 build_script:
-    - msbuild SafeExamBrowser.sln /p:Configuration=Release /p:Platform="Any CPU"
+  - msbuild SafeExamBrowser.sln /p:Configuration=Release /p:Platform=x64
 
 artifacts:
-    - path: '**\*.exe'
-      name: SEB_build
+  - path: '**\*.exe'
+    name: SEB_build
